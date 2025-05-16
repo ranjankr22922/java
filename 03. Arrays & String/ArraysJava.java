@@ -87,17 +87,17 @@
 
 // Array working and Types
 
-//Array is a collection of similar data types i.e. homogeneous.
-//Uninitialized array elements have 0 values
+// Array is a collection of similar data types i.e. homogeneous.
+// Uninitialized array elements have 0 values
 
-public class ArraysJava {
-    public static void main(String[] args) {
-        int[] a = new int[4];
-        boolean b[] = new boolean[1];
-        // int[] c = { 10, 4.5 }; // Incompatible types: Float not allowed in int[]
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " "); // 0 0 0 0
-        }
-        System.out.println(b[0]); // false
-    }
-}
+// public class ArraysJava {
+// public static void main(String[] args) {
+// int[] a = new int[4];
+// boolean b[] = new boolean[1];
+// // int[] c = { 10, 4.5 }; // Incompatible types: Float not allowed in int[]
+// for (int i = 0; i < a.length; i++) {
+// System.out.print(a[i] + " "); // 0 0 0 0
+// }
+// System.out.println(b[0]); // false
+// }
+// }
