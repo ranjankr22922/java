@@ -210,7 +210,14 @@
 // for (int i = 0; i < n; i++) {
 // a[i] = sc.nextInt();
 // }
-// System.out.println(average(a));
+
+// System.out.print("Your Inputs are : ");
+// for (int j : a) {
+// System.out.print(j + " ");
+// }
+
+// int avg = average(a);
+// System.out.println("\nAverage = " + avg);
 // }
 
 // public static int average(int[] a) {
@@ -265,30 +272,77 @@
 
 // Check if an array is sorted
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class ArraysJava {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] a = new int[n];
+// public class ArraysJava {
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// int n = sc.nextInt();
+// int[] a = new int[n];
 
-        for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
-        }
+// for (int i = 0; i < n; i++) {
+// a[i] = sc.nextInt();
+// }
 
-        boolean ans = isSorted(a, n);
-        System.out.println(ans);
-    }
+// boolean ans = isSorted(a, n);
+// System.out.println(ans);
+// }
 
-    public static boolean isSorted(int[] a, int n) {
-        for (int i = 1; i < n; i++) {
-            if (a[i] < a[i - 1]) {
-                return false;
-            }
-        }
-        return true;
-    }
-}
+// public static boolean isSorted(int[] a, int n) {
+// for (int i = 1; i < n; i++) {
+// if (a[i] < a[i - 1]) {
+// return false;
+// }
+// }
+// return true;
+// }
+// }
 
 // -------------------------------------------------------------------------------
+
+// Reverse an Array
+
+// import java.util.Scanner;
+
+// public class ArraysJava {
+
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// int n = sc.nextInt();
+// int[] a = new int[n];
+
+// for (int i = 0; i < n; i++) {
+// a[i] = sc.nextInt();
+// }
+
+// System.out.print("Original Array : ");
+// for (int j : a) {
+// System.out.print(j + " ");
+// }
+
+// System.out.println();
+// reverseArray(a, n);
+// }
+
+// public static void reverseArray(int[] a, int n) {
+// int start = 0;
+// int end = n - 1;
+
+// while (start < end) {
+// int temp = a[start];
+// a[start] = a[end];
+// a[end] = temp;
+
+// start++;
+// end--;
+// }
+// System.out.print("Reversed Array : ");
+// for (int i : a) {
+// System.out.print(i + " ");
+// }
+// }
+// }
+
+// -------------------------------------------------------------------------------
+
+// Multidimentional Array in java
