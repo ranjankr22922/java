@@ -194,3 +194,101 @@
 // System.out.println(max);
 // }
 // }
+
+// -------------------------------------------------------------------------------
+
+// Find Average
+
+// import java.util.Scanner;
+
+// public class ArraysJava {
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// int n = sc.nextInt();
+// int[] a = new int[n];
+
+// for (int i = 0; i < n; i++) {
+// a[i] = sc.nextInt();
+// }
+// System.out.println(average(a));
+// }
+
+// public static int average(int[] a) {
+// int sum = 0;
+// for (int i : a) {
+// sum += i;
+// }
+// int avg = sum / a.length;
+// return avg;
+// }
+// }
+
+// -------------------------------------------------------------------------------
+
+// Count Distinct Elements
+
+// import java.util.Scanner;
+
+// public class ArraysJava {
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// int n = sc.nextInt();
+// int[] a = new int[n];
+
+// for (int i = 0; i < n; i++) {
+// a[i] = sc.nextInt();
+// }
+// System.out.println(CountDigits(a, n));
+// }
+
+// public static int CountDigits(int[] a, int n) {
+// int count = 0;
+// boolean isDistinct = true;
+
+// for (int i = 0; i < n; i++) {
+// for (int j = (i - 1); j >= 0; j--) {
+// if (a[i] == a[j]) {
+// isDistinct = false;
+// break;
+// }
+// }
+// if (isDistinct) {
+// count++;
+// }
+// isDistinct = true;
+// }
+// return count;
+// }
+// }
+
+// -------------------------------------------------------------------------------
+
+// Check if an array is sorted
+
+import java.util.Scanner;
+
+public class ArraysJava {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] a = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        boolean ans = isSorted(a, n);
+        System.out.println(ans);
+    }
+
+    public static boolean isSorted(int[] a, int n) {
+        for (int i = 1; i < n; i++) {
+            if (a[i] < a[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+// -------------------------------------------------------------------------------
