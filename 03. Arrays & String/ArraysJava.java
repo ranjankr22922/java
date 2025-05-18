@@ -5,6 +5,16 @@
 // a[2] = 50;
 // System.out.println(a[1]);
 // System.out.println(a[2]);
+
+// for (int i = 0; i < a.length; i++) {
+// System.out.print(a[i] + " "); // i is the index i.e. 0, 1...
+// }
+
+// // Enhanced FOR LOOP
+// System.out.print("\nEnhanced FOR LOOP : ");
+// for (int i : a) {
+// System.out.print(i + " "); // i is the value i.e. 10, 20...
+// }
 // }
 // }
 
@@ -99,5 +109,88 @@
 // System.out.print(a[i] + " "); // 0 0 0 0
 // }
 // System.out.println(b[0]); // false
+// }
+// }
+
+// Array Types
+// 1. Dimensions - One Dimensional, Multi Dimensional
+// 2. Size - Fixed Size(Normal Array), Dynamic Size(ArrayList, Vector)
+
+// -------------------------------------------------------------------------------
+
+// Iteration of arrays
+
+// public class ArraysJava {
+// public static void main(String[] args) {
+// int[] marks = { 8, 2, 6, 4, 3 };
+// int sum = 0, sumSq = 0;
+// double mean, stdDev;
+
+// for (int i = 0; i < marks.length; i++) {
+// sum = sum + marks[i];
+// sumSq = sumSq + (marks[i] * marks[i]);
+// }
+
+// mean = (double) sum / marks.length;
+// stdDev = Math.sqrt((double) sumSq / marks.length - mean * mean);
+
+// System.out.printf("Mean = %.2f%n", mean);
+// System.out.printf("Standard Deviation = %.2f", stdDev);
+// }
+// }
+
+// % - start, .2f - 2 decimal float, %n - new line, printf - formatted print
+
+// -------------------------------------------------------------------------------
+
+// Sum of an Array
+
+// public class ArraysJava {
+// public static void main(String[] args) {
+// int[] a = { 5, 6, 7, 8 };
+// sum(a);
+// }
+
+// public static void sum(int[] a) {
+// int sum = 0;
+// for (int i : a) {
+// sum += i;
+// }
+// System.out.println(sum);
+// }
+// }
+
+// Pass arguments only not the type while calling a method
+
+// -------------------------------------------------------------------------------
+
+// Maximum in an Array
+
+// Method_1 - O(nlogn)
+// import java.util.Arrays;
+
+// public class ArraysJava {
+// public static void main(String[] args) {
+// int[] a = { 9, 6, 7, 8 };
+// Arrays.sort(a);
+// System.out.println(a[a.length - 1]);
+// }
+// }
+
+// Method_2 - Optimized Approach
+// public class ArraysJava {
+// public static void main(String[] args) {
+// int[] a = { 5, 9, 2, 8 };
+// maxx(a);
+// }
+
+// public static void maxx(int[] a) {
+// int max = Integer.MIN_VALUE;
+// for (int i : a) {
+// if (i > max) {
+// max = i;
+// }
+// }
+// System.out.println(max);
 // }
 // }
