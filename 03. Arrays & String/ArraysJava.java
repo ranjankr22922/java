@@ -345,4 +345,71 @@
 
 // -------------------------------------------------------------------------------
 
-// Multidimentional Array in java
+// Multidimentional Array in java - 2D Arrays
+
+// Q1
+// public class ArraysJava {
+// public static void main(String[] args) {
+// int[][] a = { { 1, 2, 3 },
+// { 4, 5, 6 } };
+
+// System.out.println("Length of Array : " + a.length);
+// System.out.println("Length of a[0] : " + a[0].length);
+// System.out.println("a[0][0] : " + a[0][0]);
+
+// for (int i = 0; i < a.length; i++) {
+// for (int j = 0; j < a[i].length; j++) {
+// System.out.print(a[i][j] + " ");
+// }
+// System.out.println();
+// }
+// }
+// }
+
+// Q2
+// public class ArraysJava {
+// public static void main(String[] args) {
+// int[][] a = { { 1, 2, 3, 8, 9 },
+// { 4, 5, 6 } };
+
+// for (int i = 0; i < a.length; i++) {
+// for (int j = 0; j < a[i].length; j++) {
+// System.out.print(a[i][j] + " ");
+// }
+// System.out.println();
+// }
+// }
+// }
+
+// Q3
+// public class ArraysJava {
+// public static void main(String[] args) {
+// int m = 2, n = 3;
+// int[][] a = new int[m][n];
+
+// for (int i = 0; i < a.length; i++) {
+// for (int j = 0; j < a[i].length; j++) {
+// System.out.print(a[i][j] + " "); // 0 0 0 ...
+// }
+// System.out.println();
+// }
+// }
+// }
+
+// Q4 - Jagged Arrays : Size of all the rows are different
+public class ArraysJava {
+    public static void main(String[] args) {
+        int m = 3; // Create a jagged array with 3 rows
+        int[][] a = new int[m][];
+
+        for (int i = 0; i < a.length; i++) {
+            a[i] = new int[i + 1]; // Each row has different length: 1, 2, 3
+
+            for (int j = 0; j < a[i].length; j++) {
+                a[i][j] = i;
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
