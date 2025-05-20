@@ -107,18 +107,46 @@
 
 // ----------------------------------------------------------------
 
-public class StringsJava {
+// public class StringsJava {
 
-    public static void main(String[] args) {
-        String s1 = "geeks";
-        String s2 = s1;
+// public static void main(String[] args) {
+// String s1 = "geeks";
+// String s2 = s1;
 
-        s1 = s1 + "forgeeks"; // OR s1 = s1.concat("forgeeks");
-        // creates a new object without modifying original object.
-        // s2 still refers to the original object.
+// s1 = s1 + "forgeeks"; // OR s1 = s1.concat("forgeeks");
+// // creates a new object without modifying original object.
+// // s2 still refers to the original object.
 
-        System.out.println(s1);
-        System.out.println(s1 == s2);
-        System.out.println(s2);
-    }
-}
+// System.out.println(s1);
+// System.out.println(s1 == s2);
+// System.out.println(s2);
+// }
+// }
+
+// ----------------------------------------------------------------
+
+// String Operations
+
+// public class StringsJava {
+
+// public static void main(String[] args) {
+// String str = "HEllO";
+// String str1 = "hELLo";
+// String str2 = " hello world! ";
+// // 1. EqualsIgnoreCase
+// System.out.println(str.equalsIgnoreCase(str1));
+
+// // 2. ToUpperCase
+// System.out.println(str.toUpperCase());
+
+// // 3.ToLowerCase
+// System.out.println(str1.toLowerCase());
+
+// // 4. Trim
+// System.out.println(str2.trim());
+// }
+// }
+
+// ----------------------------------------------------------------
+
+// String
