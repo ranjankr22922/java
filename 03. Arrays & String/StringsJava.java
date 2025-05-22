@@ -7,7 +7,7 @@
 // char[] arr = {'a','e','i','o','u'};
 
 // 2. String Class - Immutable Strings
-// 3. StringBuffer Class - Mutable Class : Multithreaded
+// 3. StringBuffer Class - Mutable Class : Multithreaded (Thread Safe)
 // 4. StringBuilder Class - Mutable Class : Single Threaded
 
 // public class StringsJava {
@@ -107,24 +107,6 @@
 
 // ----------------------------------------------------------------
 
-// public class StringsJava {
-
-// public static void main(String[] args) {
-// String s1 = "geeks";
-// String s2 = s1;
-
-// s1 = s1 + "forgeeks"; // OR s1 = s1.concat("forgeeks");
-// // creates a new object without modifying original object.
-// // s2 still refers to the original object.
-
-// System.out.println(s1);
-// System.out.println(s1 == s2);
-// System.out.println(s2);
-// }
-// }
-
-// ----------------------------------------------------------------
-
 // String Operations
 
 // public class StringsJava {
@@ -149,4 +131,43 @@
 
 // ----------------------------------------------------------------
 
-// String
+// public class StringsJava {
+
+//     public static void main(String[] args) {
+//         String s1 = "geeks";
+//         String s2 = s1;
+
+//         s1 = s1 + "forgeeks"; // OR s1 = s1.concat("forgeeks");
+//         // creates a new object without modifying original object.
+//         // s2 still refers to the original object.
+
+//         System.out.println(s1);
+//         System.out.println(s1 == s2); // false
+//         System.out.println(s2);
+//     }
+// }
+
+// ----------------------------------------------------------------
+
+// Changing the Strings create new objects.
+// StringBuilder & StringBuffer - Mutable Strings avoid heap garbage
+
+public class StringsJava {
+
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder(); // default constructor with size 16
+        StringBuilder sb0 = new StringBuilder(10); // size = 10
+
+        System.out.println(sb.capacity());
+        System.out.println(sb0.capacity());
+
+        StringBuilder sb1 = new StringBuilder("geeks");
+        StringBuilder sb2 = sb1;
+
+        sb1.append("forgeeks");
+
+        System.out.println(sb1 == sb2); // true
+
+    }
+}
