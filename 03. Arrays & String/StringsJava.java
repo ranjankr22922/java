@@ -270,3 +270,152 @@
 // }
 
 // ----------------------------------------------------------------
+
+// // Reverse a String
+
+// import java.util.Scanner;
+
+// public class StringsJava {
+
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter the string to reverse: ");
+// String a = sc.nextLine();
+// String b = "";
+
+// int ptr = a.length() - 1;
+
+// while (ptr >= 0) {
+// b = b + a.charAt(ptr);
+// ptr--;
+// }
+// System.out.println(b);
+// }
+// }
+
+// ----------------------------------------------------------------
+
+// // Reverse a String using StringBuilder
+
+// import java.util.Scanner;
+
+// public class StringsJava {
+
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter the string to reverse: ");
+// String str = sc.nextLine();
+
+// StringBuilder sb = new StringBuilder(str);
+
+// System.out.println(sb.reverse());
+// }
+// }
+
+// ----------------------------------------------------------------
+
+// // Check for Palindrome
+
+// import java.util.Scanner;
+
+// public class StringsJava {
+
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter the string to reverse: ");
+// String a = sc.nextLine();
+// int start = 0;
+// int end = a.length() - 1;
+// boolean isPalindrome = true;
+
+// while (start < end) {
+// if (a.charAt(start) != a.charAt(end)) {
+// isPalindrome = false;
+// break;
+// }
+// start++;
+// end--;
+// }
+// if (isPalindrome) {
+// System.out.println("Palindrome");
+// } else {
+// System.out.println("Not a Palindrome");
+// }
+// }
+// }
+
+// ----------------------------------------------------------------
+
+// // Check for Palindrome using StringBuilder
+
+// import java.util.Scanner;
+
+// public class StringsJava {
+
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter the string to check for palindrome: ");
+// String str = sc.nextLine();
+
+// StringBuilder rev = new StringBuilder(str);
+// StringBuilder str1 = rev.reverse();
+
+// if (str.equals(str1.toString())) {
+// System.out.println("Palindrome");
+// } else {
+// System.out.println("Not a Palindrome");
+// }
+// }
+// }
+
+// ----------------------------------------------------------------
+
+// // Decimal to Binary Conversion
+
+// import java.util.Scanner;
+
+// public class StringsJava {
+
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter the decimal number:");
+// int n = sc.nextInt();
+// decToBin(n);
+// }
+
+// public static void decToBin(int n) {
+// String s = "";
+
+// while (n > 0) {
+// s = n % 2 + s;
+// n /= 2;
+// }
+// System.out.println(s);
+// }
+// }
+
+// ----------------------------------------------------------------
+
+// Binary to Decimal Conversion
+
+import java.util.Scanner;
+
+public class StringsJava {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the decimal number:");
+        int n = sc.nextInt();
+        binToDec(n);
+    }
+
+    public static void binToDec(int n) {
+        String s = "";
+
+        while (n > 0) {
+            s = n % 2 + s;
+            n /= 2;
+        }
+        System.out.println(s);
+    }
+}
