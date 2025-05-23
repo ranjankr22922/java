@@ -218,8 +218,55 @@
 
 // ----------------------------------------------------------------
 
-public class StringsJava {
+// // Patten Searching Problem
+// // I/P : txt - "geeks for geeks", pattern - "geek", O/P : 0 10
+// // I/P : txt - "abcd pqcda", pattern - "cd", O/P : 2 7
 
-    public static void main(String[] args) {
-    }
-}
+// import java.util.Scanner;
+
+// public class StringsJava {
+
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter the text: ");
+// String txt = sc.nextLine();
+// System.out.println("Enter the pattern: ");
+// String pat = sc.nextLine();
+// patSearch(txt, pat);
+// }
+
+// public static void patSearch(String txt, String pat) {
+// int pos = txt.indexOf(pat);
+// while (pos >= 0) {
+// System.out.println(pos);
+// pos = txt.indexOf(pat, pos + 1); // -1 when not found
+// }
+// }
+// }
+
+// ----------------------------------------------------------------
+
+// // Patten Searching Problem
+// // I/P : txt - 12.666, O/P - 666
+
+// import java.util.Scanner;
+
+// public class StringsJava {
+
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter the floating values: ");
+// String txt = sc.nextLine();
+// patSearch(txt);
+// }
+
+// public static void patSearch(String txt) {
+// int pos = txt.indexOf('.');
+// while (pos >= 0) {
+// System.out.println(txt.substring(pos + 1));
+// pos = txt.indexOf('.', pos + 1); // -1 when not found
+// }
+// }
+// }
+
+// ----------------------------------------------------------------
