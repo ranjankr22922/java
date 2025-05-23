@@ -396,26 +396,29 @@
 
 // ----------------------------------------------------------------
 
-// Binary to Decimal Conversion
+// // Binary to Decimal Conversion
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class StringsJava {
+// public class StringsJava {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the decimal number:");
-        int n = sc.nextInt();
-        binToDec(n);
-    }
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter the binary number:");
+// String s = sc.nextLine();
+// binToDec(s);
+// }
 
-    public static void binToDec(int n) {
-        String s = "";
+// public static void binToDec(String s) {
+// int m = 0; // Contains the total value
+// int k = 1; // Contains the power of 2
 
-        while (n > 0) {
-            s = n % 2 + s;
-            n /= 2;
-        }
-        System.out.println(s);
-    }
-}
+// for (int i = (s.length() - 1); i >= 0; i--) {
+// m = m + (s.charAt(i) - '0') * k; // Subtraction will Converts Char to Int
+// k *= 2;
+// }
+// System.out.println(m);
+// }
+// }
+
+// ----------------------------------------------------------------
