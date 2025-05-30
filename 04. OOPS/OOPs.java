@@ -88,6 +88,3 @@ class MountainBike extends Bicycle {
         seatHeight = startHeight;
     }
 }
-
-
-
