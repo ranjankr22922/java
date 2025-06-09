@@ -87,4 +87,4 @@ class MountainBike extends Bicycle {
         super(gear, speed);
         seatHeight = startHeight;
     }
-}j
+}
