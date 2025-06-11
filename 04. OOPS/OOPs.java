@@ -54,37 +54,95 @@
 
 // ------------------------------------------------------------------------------
 
-// Inheritance - SubClass inheits Fields (Variables) & Methods of SuperClass.
-// SuperClass (Base Class/ Parent Class) - Its feautes are inherited.
-// SubClass (Derived Class/Extended Class/Child Class) - It inherits BaseClass.
+// // Inheritance - SubClass inheits Fields (Variables) & Methods of SuperClass.
+// // SuperClass (Base Class/ Parent Class) - Its feautes are inherited.
+// // SubClass (Derived Class/Extended Class/Child Class) - It inherits
+// BaseClass.
 
-// Used via 'Extends' keyword, Benefits : Reusability of Code.
+// // Used via 'Extends' keyword, Benefits : Reusability of Code.
 
-// Base Class
-class Bicycle {
-    public int gear;
-    public int speed;
+// // Base Class
+// class Bicycle {
+// public int gear;
+// public int speed;
 
-    public Bicycle(int gear, int speed) {
-        this.gear = gear;
-        this.speed = speed;
-    }
+// // 'this' refers to current object of the class.
 
-    public void applyBrake(int decrement) {
-        speed -= decrement;
-    }
+// public Bicycle(int gear, int speed) {
+// this.gear = gear;
+// this.speed = speed;
+// }
 
-    public void speedUp(int increment) {
-        speed += increment;
-    }
-}
+// public void applyBrake(int decrement) {
+// speed -= decrement;
+// }
 
-// Derived Class
-class MountainBike extends Bicycle {
-    public int seatHeight;
+// public void speedUp(int increment) {
+// speed += increment;
+// }
 
-    public MountainBike(int gear, int speed, int startHeight) {
-        super(gear, speed);
-        seatHeight = startHeight;
-    }
-}jk
+// public String printInfo() {
+// return ("Number of Gears: " + gear + "\nSpeed: " + speed);
+// }
+// }
+
+// // Derived Class
+// class MountainBike extends Bicycle {
+
+// public int seatHeight;
+
+// public MountainBike(int gear, int speed, int startHeight) {
+
+// // 'Super' is used to call immediate parent or its ancestors' methods.
+
+// super(gear, speed); // Always first statement.
+// seatHeight = startHeight;
+// }
+
+// public void setHeight(int newValue) {
+// seatHeight = newValue;
+// }
+
+// @Override // Optional Annotation but recommended
+// public String printInfo() {
+// return (super.printInfo() + "\nSeat Height: " + seatHeight);
+// }
+// }
+
+// public class OOPs {
+// public static void main(String[] args) {
+// MountainBike mb = new MountainBike(3, 100, 25);
+// System.out.println(mb.printInfo());
+// mb.speedUp(20);
+// System.out.println(mb.printInfo());
+// mb.setHeight(22);
+// System.out.println(mb.printInfo());
+
+// }
+// }
+
+// // Types of Inheritance:
+// // 1. Single Inheritance: A -> B
+// // 2. Multilevel Inheritance: A -> B -> C
+// // 3. Hierarchical Inheritance: A -> B, A -> C
+// // 4. Multiple Inheritance: A, B -> C - via Interfaces
+// // 5. Hybrid Inheritance: A -> B, A -> C, B, C -> D - via Interfaces
+
+// // Composition - Having instance of other class as a field.
+
+// class Brick {
+// // fields and methods
+// }
+
+// class Cement {
+// // fields and methods
+// }
+
+// class House {
+// Brick brick;
+// Cement cement;
+// }
+
+// // Recommended - Prefer Composition over Inheritance.
+
+// ------------------------------------------------------------------------------
