@@ -147,12 +147,73 @@
 
 // Interface
 
-public interface OOPs {
-    // constant declaration i.e. public static and final.
-    // class implements an interface but interface extends interface.
-    // Why Java does not support multiple inheritance? - Ambiguity
-    // Interface make child class to implement all methods of interface in child
-    // class also.
-}
+// public interface OOPs {
+// // constant declaration i.e. public static and final.
+// // class implements an interface but interface extends interface.
+// // Why Java does not support multiple inheritance? - Ambiguity
+// // Interface make child class to implement all methods of interface in child
+// // class also.
+// }
 
 // ------------------------------------------------------------------------------
+
+// Polymorphism
+
+// Overloading - Same method name with different parameters.
+// Overriding - Same method name in parent and child class.
+
+// Base Class
+class Bicycle {
+    public int gear;
+    public int speed;
+
+    public Bicycle(int gear, int speed) {
+        this.gear = gear;
+        this.speed = speed;
+    }
+
+    public void applyBrake(int decrement) {
+        speed -= decrement;
+    }
+
+    public void speedUp(int increment) {
+        speed += increment;
+    }
+
+    public String printInfo() {
+        return ("Number of Gears: " + gear + "\nSpeed: " + speed);
+    }
+}
+
+// Derived Class
+class MountainBike extends Bicycle {
+
+    public int seatHeight;
+
+    public MountainBike(int gear, int speed, int startHeight) {
+
+        super(gear, speed); // Always first statement.
+        seatHeight = startHeight;
+    }
+
+    public void setHeight(int newValue) {
+        seatHeight = newValue;
+    }
+
+    @Override // Optional Annotation but recommended
+    public String printInfo() {
+        return (super.printInfo() + "\nSeat Height: " + seatHeight);
+    }
+}
+
+public class OOPs {
+    public static void main(String[] args) {
+
+        // error: incompatible types: Bicycle cannot be converted to MountainBike
+        // MountainBike obj = new Bicycle(3, 100);
+
+        MountainBike obj = new MountainBike(3, 100, 25);
+        Bicycle obj1 = new MountainBike(3, 100, 25);
+        Bicycle obj2 = new Bicycle(3, 100);
+    }
+}
