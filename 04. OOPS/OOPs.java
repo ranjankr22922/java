@@ -147,5 +147,12 @@
 
 // Interface
 
+public interface OOPs {
+    // constant declaration i.e. public static and final.
+    // class implements an interface but interface extends interface.
+    // Why Java does not support multiple inheritance? - Ambiguity
+    // Interface make child class to implement all methods of interface in child
+    // class also.
+}
+
 // ------------------------------------------------------------------------------
-l
