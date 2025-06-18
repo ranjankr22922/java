@@ -380,3 +380,47 @@
 // Can initialize from private to public but not vice versa.
 
 // ------------------------------------------------------------------------------
+
+// Constructor - Special method that is called when an object is created.
+// Does not have a return type, not even void.
+// Constructor name must be same as class name.
+
+// class Point {
+// int x, y;
+
+// // Constructor
+// Point(int a, int b) {
+// x = a;
+// y = b;
+// }
+
+// void display() {
+// System.out.println("Point coordinates: (" + x + ", " + y + ")");
+// }
+// }
+
+// public class OOPs {
+// public static void main(String[] args) {
+// Point p1 = new Point(10, 20);
+// p1.display();
+// }
+// }
+
+// -----------------------------------------------------------------
+
+// class Point {
+// int x, y;
+
+// void display() {
+// System.out.println("Point coordinates: (" + x + ", " + y + ")");
+// }
+// }
+
+// public class OOPs {
+// public static void main(String[] args) {
+// Point p1 = new Point();
+// p1.display();
+// }
+// }
+
+// ------------------------------------------------------------------------------
