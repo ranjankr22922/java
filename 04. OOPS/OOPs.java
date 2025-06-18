@@ -162,6 +162,9 @@
 // Overloading - Same method name with different parameters.
 // Overriding - Same method name in parent and child class.
 
+// Runtime Polymorphism - Method overriding.
+// Dynamic Binding/ Late Binding/ Runtime Binding
+
 // Base Class
 class Bicycle {
     public int gear;
@@ -172,14 +175,17 @@ class Bicycle {
         this.speed = speed;
     }
 
+    // Category I
     public void applyBrake(int decrement) {
         speed -= decrement;
     }
 
+    // Category I
     public void speedUp(int increment) {
         speed += increment;
     }
 
+    // Category III
     public String printInfo() {
         return ("Number of Gears: " + gear + "\nSpeed: " + speed);
     }
@@ -196,10 +202,12 @@ class MountainBike extends Bicycle {
         seatHeight = startHeight;
     }
 
+    // Category II
     public void setHeight(int newValue) {
         seatHeight = newValue;
     }
 
+    // Category III
     @Override // Optional Annotation but recommended
     public String printInfo() {
         return (super.printInfo() + "\nSeat Height: " + seatHeight);
@@ -212,8 +220,19 @@ public class OOPs {
         // error: incompatible types: Bicycle cannot be converted to MountainBike
         // MountainBike obj = new Bicycle(3, 100);
 
-        MountainBike obj = new MountainBike(3, 100, 25);
-        Bicycle obj1 = new MountainBike(3, 100, 25);
-        Bicycle obj2 = new Bicycle(3, 100);
+        // I, II, Overriden III
+        // MountainBike obj = new MountainBike(3, 100, 25);
+
+        // Parent reference, Child object - I , Overriden III - Upcasting
+        // Bicycle obj = new MountainBike(3, 100, 25);
+
+        // I, III
+        Bicycle obj = new Bicycle(3, 100);
+
+        obj.speedUp(20); // I
+        obj.applyBrake(5); // I
+        // obj.setHeight(14); // II
+
+        System.out.println(obj.printInfo()); // III
     }
 }
