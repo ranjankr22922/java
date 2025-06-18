@@ -165,74 +165,177 @@
 // Runtime Polymorphism - Method overriding.
 // Dynamic Binding/ Late Binding/ Runtime Binding
 
-// Base Class
-class Bicycle {
-    public int gear;
-    public int speed;
+// // Base Class
+// class Bicycle {
+// public int gear;
+// public int speed;
 
-    public Bicycle(int gear, int speed) {
-        this.gear = gear;
-        this.speed = speed;
-    }
+// public Bicycle(int gear, int speed) {
+// this.gear = gear;
+// this.speed = speed;
+// }
 
-    // Category I
-    public void applyBrake(int decrement) {
-        speed -= decrement;
-    }
+// // Category I
+// public void applyBrake(int decrement) {
+// speed -= decrement;
+// }
 
-    // Category I
-    public void speedUp(int increment) {
-        speed += increment;
-    }
+// // Category I
+// public void speedUp(int increment) {
+// speed += increment;
+// }
 
-    // Category III
-    public String printInfo() {
-        return ("Number of Gears: " + gear + "\nSpeed: " + speed);
-    }
-}
+// // Category III
+// public String printInfo() {
+// return ("Number of Gears: " + gear + "\nSpeed: " + speed);
+// }
+// }
 
-// Derived Class
-class MountainBike extends Bicycle {
+// // Derived Class
+// class MountainBike extends Bicycle {
 
-    public int seatHeight;
+// public int seatHeight;
 
-    public MountainBike(int gear, int speed, int startHeight) {
+// public MountainBike(int gear, int speed, int startHeight) {
 
-        super(gear, speed); // Always first statement.
-        seatHeight = startHeight;
-    }
+// super(gear, speed); // Always first statement.
+// seatHeight = startHeight;
+// }
 
-    // Category II
-    public void setHeight(int newValue) {
-        seatHeight = newValue;
-    }
+// // Category II
+// public void setHeight(int newValue) {
+// seatHeight = newValue;
+// }
 
-    // Category III
-    @Override // Optional Annotation but recommended
-    public String printInfo() {
-        return (super.printInfo() + "\nSeat Height: " + seatHeight);
-    }
-}
+// // Category III
+// @Override // Optional Annotation but recommended
+// public String printInfo() {
+// return (super.printInfo() + "\nSeat Height: " + seatHeight);
+// }
+// }
 
-public class OOPs {
-    public static void main(String[] args) {
+// public class OOPs {
+// public static void main(String[] args) {
 
-        // error: incompatible types: Bicycle cannot be converted to MountainBike
-        // MountainBike obj = new Bicycle(3, 100);
+// // error: incompatible types: Bicycle cannot be converted to MountainBike
+// // MountainBike obj = new Bicycle(3, 100);
 
-        // I, II, Overriden III
-        // MountainBike obj = new MountainBike(3, 100, 25);
+// // I, II, Overriden III
+// // MountainBike obj = new MountainBike(3, 100, 25);
 
-        // Parent reference, Child object - I , Overriden III - Upcasting
-        // Bicycle obj = new MountainBike(3, 100, 25);
+// // Parent reference, Child object - I , Overriden III - Upcasting
+// // Bicycle obj = new MountainBike(3, 100, 25);
 
-        // I, III
-        Bicycle obj = new Bicycle(3, 100);
+// // I, III
+// Bicycle obj = new Bicycle(3, 100);
 
-        obj.speedUp(20); // I
-        obj.applyBrake(5); // I
-        // obj.setHeight(14); // II
+// obj.speedUp(20); // I
+// obj.applyBrake(5); // I
+// // obj.setHeight(14); // II
 
-        System.out.println(obj.printInfo()); // III
-    }
-}
+// System.out.println(obj.printInfo()); // III
+// }
+// }
+
+// ------------------------------------------------------------------------------
+
+// // Base Class
+// class Bicycle {
+// public int gear;
+// public int speed;
+// public int cadence; // (Pedal speed)
+
+// public Bicycle(int cadence, int speed, int gear) {
+// this.cadence = cadence;
+// this.gear = gear;
+// this.speed = speed;
+// }
+
+// public void applyBrake(int decrement) {
+// speed -= decrement;
+// }
+
+// public void speedUp(int increment) {
+// speed += increment;
+// }
+
+// public void printDescription() {
+// System.out.println("\nBike is " + "in gear" + this.gear + "with a cadence of
+// " + this.cadence
+// + " and a speed of " + this.speed + " km/h.");
+// }
+// }
+
+// // Derived Class
+// class MountainBike extends Bicycle {
+
+// private String suspension;
+
+// public String getSuspension() {
+// return suspension;
+// }
+
+// public void setSuspension(String suspensionType) {
+// this.suspension = suspensionType;
+// }
+
+// public MountainBike(int startCadence, int startSpeed, int startGear, String
+// suspensionType) {
+// super(startCadence, startSpeed, startGear);
+// this.setSuspension(suspensionType);
+// }
+
+// @Override
+// public void printDescription() {
+// super.printDescription();
+// System.out.println("The" + "MountainBike has a" + getSuspension() + "
+// suspension.");
+// }
+// }
+
+// class RoadBike extends Bicycle {
+
+// private int tireWidth;
+
+// public int getTireWidth() {
+// return tireWidth;
+// }
+
+// public void setTireWidth(int width) {
+// this.tireWidth = width;
+// }
+
+// public RoadBike(int startCadence, int startSpeed, int startGear, int
+// tireWidth) {
+// super(startCadence, startSpeed, startGear);
+// this.setTireWidth(tireWidth);
+// }
+
+// @Override
+// public void printDescription() {
+// super.printDescription();
+// System.out.println("The RoadBike has a tire width of " + getTireWidth() + "
+// mm.");
+// }
+
+// }
+
+// public class OOPs {
+// public static void main(String[] args) {
+// Bicycle bike01, bike02, bike03;
+
+// bike01 = new Bicycle(20, 10, 1);
+// bike02 = new MountainBike(20, 10, 1, "dual");
+// bike03 = new RoadBike(20, 10, 1, 23);
+
+// bike01.printDescription();
+// bike02.printDescription();
+// bike03.printDescription();
+// }
+// }
+
+// // Final - Method cannot be overridden by child class.
+
+// ------------------------------------------------------------------------------
+
+// Abstraction
