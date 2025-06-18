@@ -372,4 +372,11 @@
 // Static - Belongs to the class, not instances of the class.
 // Abstract - The method must be implemented by subclasses.
 
+// Garbage Collection - Automatic memory management process.
+// The Java Garbage Collector (GC) automatically deletes objects that are no
+// longer in use to free up memory.
+
+// public > protected > default > private
+// Can initialize from private to public but not vice versa.
+
 // ------------------------------------------------------------------------------
